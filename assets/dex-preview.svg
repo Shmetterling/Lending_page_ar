@@ -1,0 +1,23 @@
+<svg width="480" height="300" viewBox="0 0 480 300" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="dexGradient" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#1d1540" />
+      <stop offset="100%" stop-color="#090214" />
+    </linearGradient>
+  </defs>
+  <rect width="480" height="300" rx="24" fill="url(#dexGradient)" />
+  <rect x="24" y="30" width="432" height="48" rx="12" fill="rgba(255,255,255,0.05)" />
+  <rect x="24" y="96" width="200" height="160" rx="16" fill="rgba(0,174,234,0.12)" />
+  <rect x="256" y="96" width="200" height="160" rx="16" fill="rgba(244,185,255,0.12)" />
+  <text x="40" y="60" fill="#9ee8ff" font-family="Space Grotesk, sans-serif" font-size="18">DEX ➜ CEX Monitor</text>
+  <text x="40" y="130" fill="#f8f4ff" font-family="Inter, sans-serif" font-size="14">Uniswap</text>
+  <text x="40" y="155" fill="#8fd5ff" font-family="Inter, sans-serif" font-size="12">ETH/USDT</text>
+  <text x="272" y="130" fill="#f8f4ff" font-family="Inter, sans-serif" font-size="14">Binance</text>
+  <text x="272" y="155" fill="#cbb7ff" font-family="Inter, sans-serif" font-size="12">ETH/USDT</text>
+  <polyline points="272,190 300,170 330,210 360,160 390,200 420,150" fill="none" stroke="#88f1ff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
+  <polyline points="56,190 90,210 124,170 158,210 192,150" fill="none" stroke="#f4b9ff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
+  <text x="56" y="230" fill="#f8f4ff" font-family="Inter, sans-serif" font-size="12">DEX Price</text>
+  <text x="272" y="230" fill="#f8f4ff" font-family="Inter, sans-serif" font-size="12">CEX Price</text>
+  <text x="56" y="255" fill="#9ee8ff" font-family="Inter, sans-serif" font-size="12">Spread: 2.4%</text>
+  <text x="272" y="255" fill="#f4b9ff" font-family="Inter, sans-serif" font-size="12">Profit: +$420</text>
+</svg>

@@ -1,0 +1,1138 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ARBITRAGE RAIDER — подписка на арбитражный сканер</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="aurora aurora--one"></div>
+    <div class="aurora aurora--two"></div>
+
+    <header class="hero hero--ar">
+      <a class="logo logo--hero" href="#">
+        <img src="assets/hero-badge.png" alt="ARBITRAGE RAIDER" />
+      </a>
+      <div class="hero__center">
+        <img
+          src="assets/arbitrage-raider-logo.png"
+          alt="Arbitrage Raider"
+          class="hero__logo"
+        />
+        <h1 class="sr-only">Arbitrage Raider</h1>
+        <p class="hero__subtitle">
+          Преврати неэффективность рынка<br />
+          в своё торговое преимущество
+        </p>
+        <a class="hero__cta-main" href="#pricing">
+          <span class="hero__cta-label">КУПИТЬ СКАНЕР</span>
+        </a>
+      </div>
+    </header>
+
+    <main>
+      <section class="section why">
+        <div class="why__panel container">
+          <div class="why__head">
+            <p class="tagline">Почему ARBITRAGE RAIDER?</p>
+            <h2>Конвертируйте дисбаланс рынка в баланс на криптокошельке</h2>
+            <p>
+              Сканер обрабатывает миллионы точек данных в реальном времени и показывает
+              лучшие возможности на рынке арбитража.
+            </p>
+          </div>
+          <div class="why__grid">
+            <article>
+              <h3>Точность сигналов 97%</h3>
+              <p>Алгоритмы вырезают шум и оставляют только валидные возможности.</p>
+            </article>
+            <article>
+              <h3>Масштабируемая ликвидность</h3>
+              <p>Доступ к огромному массиву ликвидности, которая оценивается в миллиарды долларов.</p>
+            </article>
+            <article>
+              <h3>Скорость исполнения</h3>
+              <p>Обновление данных занимает доли секунды — вы всегда на шаг впереди.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section tools">
+        <div class="section__head container">
+          <p class="tagline">Инструменты</p>
+          <div>
+            <h2>Повышайте эффективность арбитража с нашими модулями</h2>
+            <p>
+              Два рабочих пространства покрывают как DEX↔CEX сделки, так и фьючерсный
+              рынок. Эти направления дают возможность собирать большое количество
+              арбитражных ситуаций за счёт высокой ликвидности фьючерсного рынка и ловить
+              аномальные спреды, которые чаще всего возникают именно на связках DEX↔CEX.
+            </p>
+          </div>
+        </div>
+        <div class="tools__grid container">
+          <article class="tool-card">
+            <header>
+              <p>Arbitrage DEX-CEX</p>
+              <span>Выход за пределы бирж</span>
+            </header>
+            <p>
+              Собирайте профит на разнице котировок бирж и децентрализованных
+              протоколов. Все данные обновляются в реальном времени.
+            </p>
+            <ul>
+              <li>Доступ к большому количеству бирж</li>
+              <li>Кастомные фильтры по сетям, спредам, профиту в $ и т.д.</li>
+              <li>Мгновенные уведомления о спредах</li>
+            </ul>
+            <button class="btn btn--ghost tool-card__cta" data-modal="dex">
+              Подробнее о направлении
+            </button>
+          </article>
+          <article class="tool-card tool-card--secondary">
+            <header>
+              <p>Futures Arbitrage</p>
+              <span>Маршруты бессрочных рынков</span>
+            </header>
+            <p>
+              Используйте неэффективность на бессрочных фьючерсах. Высокая частота
+              обновлений ситуаций и возможность работать без перевода средств между биржами.
+            </p>
+            <ul>
+              <li>Доступ к огромному количеству ликвидности</li>
+              <li>Возможность увеличивать позиции за счёт плечей</li>
+              <li>Частота обновления сделок 0,5 сек.</li>
+            </ul>
+            <button class="btn btn--ghost tool-card__cta" data-modal="futures">
+              Подробнее о направлении
+            </button>
+          </article>
+        </div>
+      </section>
+
+      <section id="cases" class="section cases">
+        <div class="section__head container">
+          <p class="tagline">Примеры</p>
+          <h2>Примеры арбитражных ситуаций</h2>
+          <p>Реальные кейсы с описанием маршрутов, сетей и ожидаемых спредов.</p>
+        </div>
+        <div class="cases__list container">
+          <article class="case-card">
+            <div>
+              <p class="case-card__tag">WLFI • отработка листинга</p>
+              <h3>Арбитражи на отработке листинга $WLFI с 50–80% спредами</h3>
+              <p>Ситуация с токеном криптофонда Трампа, где можно было обернуть до 100k USDT.</p>
+            </div>
+            <button class="btn btn--ghost case-card__cta" data-modal="case-wlfi">
+              Смотреть кейс
+            </button>
+          </article>
+          <article class="case-card">
+            <div>
+              <p class="case-card__tag">🥩 BBQ по азиатски</p>
+              <h3>Как арбитражники прожарили Gate на 7 млн$</h3>
+              <p>Две аномальные арбитражные ситуации в 1 день на бирже Gate.</p>
+            </div>
+            <button class="btn btn--ghost case-card__cta" data-modal="case-bbq">
+              Смотреть кейс
+            </button>
+          </article>
+          <article class="case-card">
+            <div>
+              <p class="case-card__tag">$ELX • CEX</p>
+              <h3>1900$ за 30 минут арбитража</h3>
+              <p>Как арбитражник отыграл неэффективность маркетмейкера на LBank.</p>
+            </div>
+            <button class="btn btn--ghost case-card__cta" data-modal="case-elx">
+              Смотреть кейс
+            </button>
+          </article>
+          <article class="case-card">
+            <div>
+              <p class="case-card__tag">⚙️ GEAR | BingX</p>
+              <h3>⚙️GEAR — недостающая деталь для мини лайфченджа</h3>
+              <p>Расхождение до 80% + хорошая ликвидность для реализации крупных сделок.</p>
+            </div>
+            <button class="btn btn--ghost case-card__cta" data-modal="case-gear">
+              Смотреть кейс
+            </button>
+          </article>
+          <article class="case-card">
+            <div>
+              <p class="case-card__tag">$TROLL | Gate</p>
+              <h3>Арбитраж на токене TROLL</h3>
+              <p>2Х на депозиты в десятки тысяч долларов.</p>
+            </div>
+            <button class="btn btn--ghost case-card__cta" data-modal="case-troll">
+              Смотреть кейс
+            </button>
+          </article>
+          <article class="case-card">
+            <div>
+              <p class="case-card__tag">$BRETT | Poloniex</p>
+              <h3>Можно ли обернуть 250 000 $ в арбитраже? Можно.</h3>
+              <p>Арбитражной ситуацией поделился один из пользователей нашего сканера и нашего чата.</p>
+            </div>
+            <button class="btn btn--ghost case-card__cta" data-modal="case-brett">
+              Смотреть кейс
+            </button>
+          </article>
+          <article class="case-card">
+            <div>
+              <p class="case-card__tag">BAL | DEX↔CEX</p>
+              <h3>Межбиржевой арбитраж на росте токена</h3>
+              <p>+2550$ за 1 арбитражную ситуацию на токене BAL.</p>
+            </div>
+            <button class="btn btn--ghost case-card__cta" data-modal="case-bal">
+              Смотреть кейс
+            </button>
+          </article>
+          <article class="case-card">
+            <div>
+              <p class="case-card__tag">APU | DEX↔CEX</p>
+              <h3>Жирный арбитраж на токене APU</h3>
+              <p>Арбитражная ситуация с возможностью прогона 100k$ со спредом 35%.</p>
+            </div>
+            <button class="btn btn--ghost case-card__cta" data-modal="case-apu">
+              Смотреть кейс
+            </button>
+          </article>
+        </div>
+      </section>
+
+      <section id="video" class="section video">
+        <div class="section__head container">
+          <p class="tagline">Видео</p>
+          <div>
+            <h2>Смотрите, как работает ARBITRAGE RAIDER</h2>
+            <p>Короткие включения и демо-видео помогают понять, как мы собираем сигналы и прорабатываем сделки.</p>
+          </div>
+        </div>
+        <div class="video__layout container">
+          <article class="video__highlight" data-video-highlight>
+            <div class="video__nav">
+              <button class="video__nav-btn video__nav-btn--prev" type="button" data-video-prev aria-label="Предыдущее видео">
+                ‹
+              </button>
+              <button class="video__nav-btn video__nav-btn--next" type="button" data-video-next aria-label="Следующее видео">
+                ›
+              </button>
+            </div>
+            <div class="video__player">
+              <img data-video-cover src="assets/video-cover.jpg" alt="Главное видео ARBITRAGE RAIDER" />
+              <a
+                class="video__play"
+                data-video-link
+                href="https://www.youtube.com/watch?v=R6CGisDviTo&t=4s"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <span data-video-cta>Смотреть на YouTube</span>
+              </a>
+            </div>
+            <div class="video__highlight-info">
+              <p class="video__source" data-video-source>YouTube</p>
+              <h3 data-video-title>Главное демо ARBITRAGE RAIDER</h3>
+              <p data-video-description>
+                Главное видео на YouTube показывает продукт изнутри: подключение сетей, работу фильтров и сортировки.
+                После просмотра видео, вам будет гораздо легче разобраться в логике сканера, настроить фильтры под свою
+                стратегию и уверенно реализовать ваши первые арбитражные ситуации с нашим продуктом.
+              </p>
+            </div>
+          </article>
+          <div class="video__playlist video__playlist--data">
+            <article
+              class="video-card"
+              data-video-item
+              data-video-source="YouTube"
+              data-video-title="Главное демо ARBITRAGE RAIDER"
+              data-video-description="Главное видео показывает продукт изнутри: подключение сетей, работу фильтров и реализацию сделок."
+              data-video-cover="assets/video-cover.jpg"
+              data-video-url="https://www.youtube.com/watch?v=R6CGisDviTo&t=4s"
+              data-video-cta="Смотреть на YouTube"
+              tabindex="0"
+              role="button"
+              aria-pressed="true"
+            >
+              <p class="video-card__tag">YouTube • Видео</p>
+              <h3>Главное демо ARBITRAGE RAIDER</h3>
+              <p>Посмотрите продукт изнутри: сети, фильтры, сортировку сигналов и работу команды.</p>
+              <span class="video-card__hint">Нажмите, чтобы вернуть главное видео</span>
+              <figure class="video-card__preview">
+                <img src="assets/video-cover.jpg" alt="Главное демо ARBITRAGE RAIDER" loading="lazy" />
+              </figure>
+            </article>
+            <article
+              class="video-card"
+              data-video-item
+              data-video-source="Telegram"
+              data-video-title="290% за неделю арбитража"
+              data-video-description="Разбор маршрутов и управления рисками, чтобы стабильно наращивать депозит."
+              data-video-cover="assets/bbq-1.jpg"
+              data-video-url="https://t.me/arbitrage_soft/38"
+              data-video-cta="Смотреть в Telegram"
+              tabindex="0"
+              role="button"
+              aria-pressed="false"
+            >
+              <p class="video-card__tag">Telegram • Видео</p>
+              <h3>290% за неделю арбитража</h3>
+              <p>Разбор маршрутов и управления рисками, чтобы стабильно наращивать депозит.</p>
+              <span class="video-card__hint">Нажмите, чтобы показать в превью</span>
+              <figure class="video-card__preview">
+                <img src="assets/bbq-1.jpg" alt="290% за неделю арбитража" loading="lazy" />
+              </figure>
+            </article>
+            <article
+              class="video-card"
+              data-video-item
+              data-video-source="Telegram"
+              data-video-title="1092$ за один арбитражный день"
+              data-video-description="Кейс команды с пошаговым объяснением вычисления спреда и комиссий."
+              data-video-cover="assets/elx-1.jpg"
+              data-video-url="https://t.me/arbitrage_soft/50?single"
+              data-video-cta="Смотреть в Telegram"
+              tabindex="0"
+              role="button"
+              aria-pressed="false"
+            >
+              <p class="video-card__tag">Telegram • Видео</p>
+              <h3>1092$ за один арбитражный день</h3>
+              <p>Кейс команды с пошаговым объяснением вычисления спреда и комиссий.</p>
+              <span class="video-card__hint">Нажмите, чтобы показать в превью</span>
+              <figure class="video-card__preview">
+                <img src="assets/elx-1.jpg" alt="1092$ за один арбитражный день" loading="lazy" />
+              </figure>
+            </article>
+            <article
+              class="video-card"
+              data-video-item
+              data-video-source="Telegram"
+              data-video-title="Можно ли прогнать 250 000$?"
+              data-video-description="Ответ на популярный вопрос о крупных объёмах и безопасном прогоне средств."
+              data-video-cover="assets/brett-1.jpg"
+              data-video-url="https://t.me/arbitrage_soft/61"
+              data-video-cta="Смотреть в Telegram"
+              tabindex="0"
+              role="button"
+              aria-pressed="false"
+            >
+              <p class="video-card__tag">Telegram • Видео</p>
+              <h3>Можно ли прогнать 250 000$?</h3>
+              <p>Ответ на популярный вопрос о крупных объёмах и безопасном прогоне средств.</p>
+              <span class="video-card__hint">Нажмите, чтобы показать в превью</span>
+              <figure class="video-card__preview">
+                <img src="assets/brett-1.jpg" alt="Можно ли прогнать 250 000$?" loading="lazy" />
+              </figure>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="pricing" class="section pricing pricing--alt">
+        <div class="section__head container">
+          <p class="tagline">Тарифы</p>
+          <h2>Подберите доступ под свою стратегию</h2>
+          <p>Каждый план включает поддержку и регулярные обновления от команды.</p>
+        </div>
+        <div class="pricing__grid container">
+          <article class="pricing__card">
+            <span class="pricing__badge">DEX↔CEX</span>
+            <div class="pricing__price">
+              <strong>150</strong>
+              <span>USDT / месяц</span>
+            </div>
+            <ul>
+              <li>Списки CEX и сети Solana/EVM</li>
+              <li>Обновления котировок в реальном времени</li>
+              <li>Доступ к чату с арбитражниками</li>
+            </ul>
+            <a class="btn btn--ghost" href="https://t.me/RAIDER_ADM" target="_blank" rel="noopener noreferrer">Получить доступ</a>
+          </article>
+          <article class="pricing__card pricing__card--active">
+            <span class="pricing__badge">Полный пакет</span>
+            <div class="pricing__price">
+              <strong>175</strong>
+              <span>USDT / месяц</span>
+            </div>
+            <ul>
+              <li>доступ к двум разделам (DEX↔CEX и Фьючерсы)</li>
+              <li>Доступ к чату с арбитражниками</li>
+            </ul>
+            <a class="btn btn--primary" href="https://t.me/RAIDER_ADM" target="_blank" rel="noopener noreferrer">Получить полный доступ</a>
+          </article>
+          <article class="pricing__card">
+            <span class="pricing__badge">Фьючерсы</span>
+            <div class="pricing__price">
+              <strong>50</strong>
+              <span>USDT / месяц</span>
+            </div>
+            <ul>
+              <li>Маршруты для бессрочных контрактов</li>
+              <li>0,5 сек. на обработку данных</li>
+              <li>Доступ к чату с арбитражниками</li>
+            </ul>
+            <a class="btn btn--ghost" href="https://t.me/RAIDER_ADM" target="_blank" rel="noopener noreferrer">Получить доступ</a>
+          </article>
+        </div>
+      </section>
+
+      <section id="faq" class="section faq faq--wide">
+        <div class="section__head container">
+          <p class="tagline">FAQ</p>
+          <h2>Ответы на частые вопросы</h2>
+          <p>Всё, что нужно знать об арбитраже и работе ARBITRAGE RAIDER.</p>
+        </div>
+        <div class="faq__list container">
+          <article class="faq__item">
+            <button class="faq__question">
+              <span>Что такое криптоарбитраж?</span>
+              <span class="faq__toggle" aria-label="toggle">+</span>
+            </button>
+            <div class="faq__answer">
+              <p>
+                Это стратегия заработка на разнице цен одного и того же актива на разных
+                рынках. Наши сканеры показывают точки входа до того, как рынок
+                выравнивается.
+              </p>
+            </div>
+          </article>
+          <article class="faq__item">
+            <button class="faq__question">
+              <span>Как быстро я смогу начать зарабатывать?</span>
+              <span class="faq__toggle" aria-label="toggle">+</span>
+            </button>
+            <div class="faq__answer">
+              <p>
+                После регистрации на биржах и подключения подписки, вы сможете начать
+                зарабатывать. Преимущество данного направления заключается в том, что вы
+                зарабатываете здесь и сейчас. Однако перед началом совершения арбитражных
+                сделок, мы рекомендуем вам пройти
+                <strong class="link-highlight"
+                  ><a href="https://t.me/CryptoLarin_bot?start=arbitrage" target="_blank" rel="noopener noreferrer"
+                    >бесплатный базовый курс</a
+                  ></strong
+                >
+                .
+              </p>
+            </div>
+          </article>
+          <article class="faq__item">
+            <button class="faq__question">
+              <span>Какой минимальный депозит нужен?</span>
+              <span class="faq__toggle" aria-label="toggle">+</span>
+            </button>
+            <div class="faq__answer">
+              <p>
+                <strong>Арбитраж фьючерсов:</strong>
+                Начать можно с небольшой суммы, так как комиссии на CEX минимальны и можно
+                использовать плечи для увеличения депозита. Плечи рекомендуем применять
+                только опытным арбитражникам.
+              </p>
+              <p>
+                <strong>DEX-CEX арбитраж:</strong>
+                Желательно иметь депозит от 1500 USDT, чтобы прибыль была ощутимой. Набивать
+                руку можно в сетях с дешёвым газом (Solana, BSC, Base), начиная с 300 USDT.
+              </p>
+            </div>
+          </article>
+          <article class="faq__item">
+            <button class="faq__question">
+              <span>Какие риски есть?</span>
+              <span class="faq__toggle" aria-label="toggle">+</span>
+            </button>
+            <div class="faq__answer">
+              <p>
+                Основной риск заключается в
+                <a class="link-glow" href="https://t.me/c/1554562737/905" target="_blank" rel="noopener noreferrer"
+                  >несоблюдении риск-менджмента</a
+                >. Определите для себя
+                ту сумму, с которой вам будет комфортно работать в границах одной сделки.
+                Всем новичкам мы рекомендуем перед началом работы с основным депозитом
+                набивать руку на сетях с дешевыми комиссиями на небольших суммах, чтобы все
+                действия в арбитраже выполнялись вами машинально.
+              </p>
+            </div>
+          </article>
+          <article class="faq__item">
+            <button class="faq__question">
+              <span>Существует ли реферальная или партнёрская программа?</span>
+              <span class="faq__toggle" aria-label="toggle">+</span>
+            </button>
+            <div class="faq__answer">
+              <p>
+                Да, у ARBITRAGE RAIDER есть реферальное и партнёрское направление. Напишите в
+                наш Telegram <a class="link-glow" href="https://t.me/RAIDER_ADM" target="_blank" rel="noopener noreferrer">по этой ссылке</a>, и менеджер расскажет все детали.
+              </p>
+            </div>
+          </article>
+          <article class="faq__item">
+            <button class="faq__question">
+              <span>Есть ли для пользователей сканера чат?</span>
+              <span class="faq__toggle" aria-label="toggle">+</span>
+            </button>
+            <div class="faq__answer">
+              <p>
+                Да, клиенты получают доступ в закрытый чат с активными арбитражниками. Там мы
+                разбираем сделки, делимся актуальными маршрутами и оперативно отвечаем на
+                вопросы. Чат доступен в тарифах с пометкой «чат арбитражников».
+              </p>
+            </div>
+          </article>
+          <article class="faq__item">
+            <button class="faq__question">
+              <span>Есть ли у вас обучение?</span>
+              <span class="faq__toggle" aria-label="toggle">+</span>
+            </button>
+            <div class="faq__answer">
+              <p>
+                Да, у нас есть
+                <strong class="link-highlight"
+                  ><a href="https://t.me/CryptoLarin_bot?start=arbitrage" target="_blank" rel="noopener noreferrer"
+                    >бесплатный базовый курс</a
+                  ></strong
+                >,
+                а также полноценные курсы, в которых рассказывается всё про арбитраж от самых
+                простых вещей до самых сложных. Помимо этого, мы проводим периодические
+                созвоны в
+                <a class="link-glow" href="https://t.me/+RKsN26IZn5o2OGYy" target="_blank" rel="noopener noreferrer"
+                  >канале</a
+                >
+                и публикуем полноценные статьи с полезной информацией.
+              </p>
+            </div>
+          </article>
+          <article class="faq__item">
+            <button class="faq__question">
+              <span>Сколько в среднем можно зарабатывать на арбитражных сделках?</span>
+              <span class="faq__toggle" aria-label="toggle">+</span>
+            </button>
+            <div class="faq__answer">
+              <p>
+                Потенциальная доходность зависит от депозита, скорости исполнения и выбранной
+                стратегии. Опытные арбитражники делают по несколько десятков процентов к
+                депозиту за месяц, а иногда это и кратные иксы. Ниже реальные кейсы наших
+                пользователей:
+              </p>
+              <ul class="faq__cases">
+                <li>
+                  <a class="link-glow" href="https://t.me/arbitrage_soft/27" target="_blank" rel="noopener noreferrer"
+                    >123% чистой прибыли за 6 дней</a
+                  >
+                </li>
+                <li>
+                  <a class="link-glow" href="https://t.me/arbitrage_soft/38" target="_blank" rel="noopener noreferrer"
+                    >290% за неделю арбитража</a
+                  >
+                </li>
+                <li>
+                  <a class="link-glow" href="https://t.me/arbitrage_soft/50?single" target="_blank" rel="noopener noreferrer"
+                    >1092$ или больше 2х за 1 арбитражный день</a
+                  >
+                </li>
+                <li>
+                  <a class="link-glow" href="https://t.me/arbitrage_soft/61" target="_blank" rel="noopener noreferrer"
+                    >Можно ли прогнать в арбитраже 250 000$?</a
+                  >
+                </li>
+                <li>
+                  <a class="link-glow" href="https://t.me/c/1554562737/766" target="_blank" rel="noopener noreferrer"
+                    >Прирост к депозиту в 600% за месяц у новичка</a
+                  >
+                </li>
+              </ul>
+            </div>
+          </article>
+        </div>
+        <p class="faq__note container">
+          <strong>
+            Полноценный раздел FAQ c интересными вопросами по арбитражу
+            <a class="link-glow" href="https://t.me/c/1554562737/913" target="_blank" rel="noopener noreferrer">по этой ссылке</a
+            >.
+          </strong>
+        </p>
+      </section>
+
+      <section id="exchanges" class="section exchanges">
+        <div class="section__head container">
+          <p class="tagline">Биржи</p>
+          <h2>Поддерживаем 15+ крупных площадок</h2>
+          <p>Список CEX и DEX бирж с которыми мы работаем.</p>
+        </div>
+        <div class="exchanges__grid container">
+          <a href="https://www.binance.com/ru/activity/referral-entry/CPA/together?ref=CPA_0097G2V6EU" target="_blank" rel="noopener noreferrer">Binance</a>
+          <a href="https://bingx.com/partner/defiraider/" target="_blank" rel="noopener noreferrer">BingX</a>
+          <a href="https://www.bitfinex.com/sign-up?refcode=V0SSh3CYq" target="_blank" rel="noopener noreferrer">Bitfinex</a>
+          <a href="https://www.bitget.com/ru/referral/register?from=referral&clacCode=6HG7BX70" target="_blank" rel="noopener noreferrer">Bitget</a>
+          <a href="https://www.bitmart.com/invite/Wx69je/en" target="_blank" rel="noopener noreferrer">Bitmart</a>
+          <a href="https://blofin.com/register?referral_code=kjC7TW" target="_blank" rel="noopener noreferrer">Blofin</a>
+          <a href="https://partner.bybit.com/b/defiraider" target="_blank" rel="noopener noreferrer">Bybit</a>
+          <a href="https://www.coinex.com/register?rc=futga" target="_blank" rel="noopener noreferrer">Coinex</a>
+          <a href="https://dedust.io/" target="_blank" rel="noopener noreferrer">DeDust</a>
+          <a href="https://swap.defillama.com/" target="_blank" rel="noopener noreferrer">DeFiLlama</a>
+          <a href="https://www.gate.io/signup/UVJGUV0L?ref_type=102" target="_blank" rel="noopener noreferrer">Gate</a>
+          <a href="https://www.htx.com/invite/ru-ru/1f?invite_code=75tr4" target="_blank" rel="noopener noreferrer">Huobi</a>
+          <a href="https://jup.ag/" target="_blank" rel="noopener noreferrer">Jupiter</a>
+          <a href="https://www.kucoin.com/r/rf/QBS5G8ZJ" target="_blank" rel="noopener noreferrer">Kucoin</a>
+          <a href="https://www.lbank.com/ru/login/?icode=1B7BJ" target="_blank" rel="noopener noreferrer">Lbank</a>
+          <a href="https://www.mexc.com/ru-RU/acquisition/custom-sign-up?shareCode=mexc-1QDB1" target="_blank" rel="noopener noreferrer">Mexc</a>
+          <a href="https://okx.com/join/7699709" target="_blank" rel="noopener noreferrer">Okx</a>
+          <a href="https://www.ourbit.com/register?inviteCode=N8QZ99" target="_blank" rel="noopener noreferrer">Ourbit</a>
+          <a href="https://poloniex.com/signup?c=QW66ZWWW&r=%252Freferral%252FtasksQW66ZWWW" target="_blank" rel="noopener noreferrer">Poloniex</a>
+          <a href="https://ston.fi/" target="_blank" rel="noopener noreferrer">STONfi</a>
+          <a href="https://www.xt.com/ru/accounts/register?ref=EH7UJ4" target="_blank" rel="noopener noreferrer">XT</a>
+        </div>
+      </section>
+
+      <section class="section community">
+        <div class="community__card container">
+          <div>
+            <p class="tagline">Telegram</p>
+            <h2>Все материалы и свежие сделки в наших каналах</h2>
+            <ul>
+              <li>Обучающие сессии и методички</li>
+              <li>Готовые стратегии и разборы</li>
+              <li>Анонсы обновлений и AMA</li>
+            </ul>
+          </div>
+          <div class="community__actions">
+            <a class="btn btn--primary btn--lg" href="https://t.me/+SvEae--a3OU0OGNi" target="_blank" rel="noopener noreferrer"
+              >ARBITRAGE RAIDER | Арбитраж криптовалют</a
+            >
+            <a class="btn btn--primary btn--lg" href="https://t.me/+RKsN26IZn5o2OGYy" target="_blank" rel="noopener noreferrer"
+              >Larin | Ончейн Арбитраж</a
+            >
+          </div>
+        </div>
+      </section>
+
+      <section id="media" class="section media">
+        <div class="section__head container">
+          <p class="tagline">Медиа</p>
+          <div>
+            <h2>Другие медиа ресурсы</h2>
+            <p>Подписывайтесь на каналы и рубрики, где мы делимся стратегиями, обучением и живым общением.</p>
+          </div>
+        </div>
+        <div class="media__grid container">
+          <article class="media-card">
+            <p class="media-card__tag">Instagram</p>
+            <h3>@alexeylarin</h3>
+            <p>Бэкстейдж разработки сканера, будни команды и личные инсайты Алексея.</p>
+            <a class="btn btn--primary" href="https://www.instagram.com/alexeylarin?igsh=MXNub241cDVmN3owZA==" target="_blank" rel="noopener noreferrer">Подписаться</a>
+          </article>
+          <article class="media-card">
+            <p class="media-card__tag">YouTube</p>
+            <h3>Alexey Larin</h3>
+            <p>Видео о подходах к арбитражу, обзорах стратегий и управлению капиталом.</p>
+            <a class="btn btn--ghost" href="https://youtube.com/@alexeylarin1?si=8A5SyzBTHFetjQcd" target="_blank" rel="noopener noreferrer">Смотреть</a>
+          </article>
+          <article class="media-card">
+            <p class="media-card__tag">YouTube</p>
+            <h3>Arbitrage Soft</h3>
+            <p>Записи разборов сделок, AMA и практические сессии команды ARBITRAGE RAIDER.</p>
+            <a class="btn btn--ghost" href="https://www.youtube.com/@arbitragesoft" target="_blank" rel="noopener noreferrer">Смотреть</a>
+          </article>
+          <article class="media-card">
+            <p class="media-card__tag">Обучение</p>
+            <h3>CryptoLarin Bot — базовый курс</h3>
+            <p>Бесплатный бот с лекциями и чек-листами, чтобы быстрее войти в арбитраж.</p>
+            <a class="btn btn--ghost" href="https://t.me/CryptoLarin_bot?start=arbitrage" target="_blank" rel="noopener noreferrer">Начать обучение</a>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <div class="modal" id="modal-dex" hidden>
+      <div class="modal__backdrop" data-modal-close></div>
+      <div class="modal__dialog" role="dialog" aria-modal="true" aria-labelledby="modal-dex-title">
+        <button class="modal__close" type="button" data-modal-close aria-label="Закрыть модальное окно">
+          ×
+        </button>
+        <div class="modal__body">
+          <div>
+            <p class="tagline">Arbitrage DEX-CEX</p>
+            <h3 id="modal-dex-title">Детали направления DEX↔CEX</h3>
+            <p>
+              Анализирует пулы ликвидности на DEX и стаканы централизованных бирж.
+              Показывает связки с максимальными спредами, учитывая комиссии мостов и
+              скорость вывода средств.
+            </p>
+            <ul>
+              <li>Более 15 CEX и 20 сетей (Solana, BSC, Arbitrum и др.)</li>
+              <li>Авторасчёт ROI с учётом газа и комиссий бирж</li>
+              <li>Большое количество параметров для настройки фильтрации и сортировки алертов</li>
+            </ul>
+          </div>
+          <div class="modal__carousel" data-carousel>
+            <button class="modal__carousel-btn modal__carousel-btn--prev" type="button" data-carousel-prev aria-label="Предыдущее фото">
+              ‹
+            </button>
+            <div class="modal__carousel-track" data-carousel-track>
+              <img src="assets/dex-cex-modal.png" alt="Снимок панели DEX↔CEX" />
+            </div>
+            <button class="modal__carousel-btn modal__carousel-btn--next" type="button" data-carousel-next aria-label="Следующее фото">
+              ›
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal" id="modal-futures" hidden>
+      <div class="modal__backdrop" data-modal-close></div>
+      <div class="modal__dialog" role="dialog" aria-modal="true" aria-labelledby="modal-futures-title">
+        <button class="modal__close" type="button" data-modal-close aria-label="Закрыть модальное окно">
+          ×
+        </button>
+        <div class="modal__body">
+          <div>
+            <p class="tagline">Futures Arbitrage</p>
+            <p>
+              Арбитраж фьючерсов — это способ зарабатывать на разнице условий между биржами,
+              когда один и тот же актив торгуется по разным ценам или с разными ставками
+              финансирования.
+            </p>
+            <p>
+              Арбитражник выставляет LONG позицию там, где дешевле, и SHORT позицию там, где
+              дороже. Когда цены и ставки выравниваются, разница между ними превращается в
+              зафиксированный профит в долларах.
+            </p>
+            <ul>
+              <li>Доступ к арбитражным ситуациям с огромной ликвидностью</li>
+              <li>Возможность увеличивать размер арбитражных сделок за счёт плеча</li>
+              <li>Частота обновления сделок 0,5 секунды</li>
+            </ul>
+          </div>
+          <div class="modal__carousel" data-carousel>
+            <button class="modal__carousel-btn modal__carousel-btn--prev" type="button" data-carousel-prev aria-label="Предыдущее фото">
+              ‹
+            </button>
+            <div class="modal__carousel-track" data-carousel-track>
+              <img src="assets/futures-terminal.jpg" alt="Снимок панели Futures Arbitrage" />
+            </div>
+            <button class="modal__carousel-btn modal__carousel-btn--next" type="button" data-carousel-next aria-label="Следующее фото">
+              ›
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal" id="modal-case-wlfi" hidden>
+      <div class="modal__backdrop" data-modal-close></div>
+      <div class="modal__dialog modal__dialog--wide" role="dialog" aria-modal="true" aria-labelledby="modal-case-wlfi-title">
+        <button class="modal__close" type="button" data-modal-close aria-label="Закрыть модальное окно">
+          ×
+        </button>
+        <div class="modal__body modal__body--stacked">
+          <div class="modal__carousel" data-carousel>
+            <button class="modal__carousel-btn modal__carousel-btn--prev" type="button" data-carousel-prev aria-label="Предыдущее фото">
+              ‹
+            </button>
+            <div class="modal__carousel-track" data-carousel-track>
+              <img src="assets/wlfi-1.jpg" alt="WLFI арбитраж — 60% спред" />
+              <img src="assets/wlfi-2.jpg" alt="WLFI арбитраж — пример сделки" />
+            </div>
+            <button class="modal__carousel-btn modal__carousel-btn--next" type="button" data-carousel-next aria-label="Следующее фото">
+              ›
+            </button>
+          </div>
+          <div>
+            <p class="tagline">WLFI Listing</p>
+            <h3 id="modal-case-wlfi-title">Арбитражи на листинге $WLFI с 50–80% спредами</h3>
+            <p>
+              1 сентября был листинг монеты семьи Трампа. Потенциально огромный спрос, разные сети,
+              давление инвесторов (20% разлок на тге) + жирные пулы ликвидности. Все это в совокупности
+              создает благоприятную арбитражную среду.
+            </p>
+            <p>
+              На страте спотовых торгов цена везде была разная, но средний прайс был около 1$. Самая
+              высокая активность была в майнет сети. Комиссия за транзакцию доходила до 600$.
+            </p>
+            <p>
+               В целом, пулы ликвидности позволяли гонять арбитраж даже с такой комиссией, так как
+              арбитражники ловили спреды по 60-80% на суммы до 100к$. Но что делать людям с небольшими
+              депозитами?
+            </p>
+            <p>У вас было два варианта:</p>
+            <p>
+              1️⃣ Откупать лимитками через 1inch.<br />
+              В этом случае комиссия ложиться на мейкера, то есть на того, кто будет продаваться в вашу
+              лимитку. Арбитраж в несколько процентов держался пару часов. Можно было спокойно гонять
+              монету в несколько процентов профита.
+            </p>
+            <p>
+              2️⃣ Арбитражить в дешевых сетях.<br />
+              Монета была запущена в разных сетях (SOL | ETH | BSC).
+              Цены за комиссию в остальных двух сетях всегда незначительные, осталось лишь проверить
+              депозиты на биржах в этих сетях.
+            </p>
+            <p>
+               Биржи, которые предоставили возможность депозитить в других сетях было немного, но их
+              было достаточно (Gate, MEXC, Ourbit). Тут спред был на старте торгов, но он был такой же
+              большой как и в майнете (пример сделки на скрине)
+            </p>
+            <p>В общем, спред был ожидаем. Кто отнёсся серьезно и подготовились заранее, те хорошо заработали.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal" id="modal-case-bbq" hidden>
+      <div class="modal__backdrop" data-modal-close></div>
+      <div class="modal__dialog modal__dialog--wide" role="dialog" aria-modal="true" aria-labelledby="modal-case-bbq-title">
+        <button class="modal__close" type="button" data-modal-close aria-label="Закрыть модальное окно">
+          ×
+        </button>
+        <div class="modal__body modal__body--stacked">
+          <div class="modal__carousel" data-carousel>
+            <button class="modal__carousel-btn modal__carousel-btn--prev" type="button" data-carousel-prev aria-label="Предыдущее фото">
+              ‹
+            </button>
+            <div class="modal__carousel-track" data-carousel-track>
+              <img src="assets/bbq-1.jpg" alt="BBQ кейс — лимитки на Gate" />
+              <img src="assets/bbq-2.jpg" alt="BBQ кейс — график спредов" />
+            </div>
+            <button class="modal__carousel-btn modal__carousel-btn--next" type="button" data-carousel-next aria-label="Следующее фото">
+              ›
+            </button>
+          </div>
+          <div>
+            <p class="tagline">🥩 BBQ по азиатски</p>
+            <h3 id="modal-case-bbq-title">Как арбитражники прожарили Gate на 7 млн$</h3>
+            <p>
+              Выходные выдались интересными. На GMX постоянно образовывались спреды, достаточно
+              много было пампов с 20-30% спреда. В начале ночи на gate выставили лимитку в 1 млн.$.
+              Откупив быстро на dex по курсу 18-20$ можно было продаться в лимитку по 30$, забрав на
+              огромный депозит 50-65% прибыли.
+            </p>
+            <p>
+              Почти сразу вылетает следующая арбитражная ситуация с тем же гейтом, но на токене $BBQ. Выставили лимитки
+              на 2млн.$ по прайсу 0,02$ на гейте, а на байбите можно было откупать по 0,015-0,017$,
+              стакан был хороший на байбите, так что можно было откупаться очень быстро на десятки
+              тысяч долларов.
+            </p>
+            <p>
+              Не успел я получить баланс на гейт в монете, как вижу что появляется еще одна лимитка
+              на гейте по прайсу в 0,025$ и спред уже составляет не 30%, а 60%. 1 круг занимал в
+              среднем около 5-7 минут. Арбитражная ситуация держалась где-то около получаса. По
+              эксплореру видел как другие арбитражники реализовывали депозиты на сотни тысяч баксов
+              с таким спредом.
+            </p>
+            <p>
+              После того как съели эти две лимитки, до 6 утра цена держалась на лимитке в 0,0175$, в
+              которой было 2млн.$. Там тоже был спред с байбитом, но уже в 1-3%, иногда доходил до 5%.
+              В целом, всю ночь можно было крутить здесь депозит и на выходе получить 2-4х на депозит.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal" id="modal-case-elx" hidden>
+      <div class="modal__backdrop" data-modal-close></div>
+      <div class="modal__dialog modal__dialog--wide" role="dialog" aria-modal="true" aria-labelledby="modal-case-elx-title">
+        <button class="modal__close" type="button" data-modal-close aria-label="Закрыть модальное окно">
+          ×
+        </button>
+        <div class="modal__body modal__body--stacked">
+          <div class="modal__carousel" data-carousel>
+            <button class="modal__carousel-btn modal__carousel-btn--prev" type="button" data-carousel-prev aria-label="Предыдущее фото">
+              ‹
+            </button>
+            <div class="modal__carousel-track" data-carousel-track>
+              <img src="assets/elx-1.jpg" alt="ELX кейс — лонг/шорт позиция" />
+              <img src="assets/elx-2.jpg" alt="ELX кейс — скрин сделки" />
+              <img src="assets/elx-3.jpg" alt="ELX кейс — график цены" />
+              <img src="assets/elx-4.jpg" alt="ELX кейс — фиксация прибыли" />
+            </div>
+            <button class="modal__carousel-btn modal__carousel-btn--next" type="button" data-carousel-next aria-label="Следующее фото">
+              ›
+            </button>
+          </div>
+          <div>
+            <p class="tagline">Арбитраж на токене $ELX</p>
+            <h3 id="modal-case-elx-title">1900$ за 30 минут арбитража</h3>
+            <p>Как арбитражник воспользовался неэффективностью маркетмейкера на бирже LBank.</p>
+            <p>
+              Маркетмейкер пампил и дампил цену на фючах в 10% (показано на скрине). Была выбрана без
+              рискованная стратегию с хеджем спреда. То есть, дожидался когда цена на Lbank пампилась
+              на 5% выше цены MEXC и лимитным ордером открывал шорт на Lbank.
+            </p>
+            <p>
+              На MEXC открывал лонг, тем самым фиксируя спред. Но что самое вкусное, это то что мм на
+              LBank дампил цену ниже цены MEXC, что дополнительно давало 5% на шорт позицию.
+            </p>
+            <p>Итого чистое движение около 8-10%. Итоговый профит 1900$ 💰</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal" id="modal-case-gear" hidden>
+      <div class="modal__backdrop" data-modal-close></div>
+      <div class="modal__dialog modal__dialog--wide" role="dialog" aria-modal="true" aria-labelledby="modal-case-gear-title">
+        <button class="modal__close" type="button" data-modal-close aria-label="Закрыть модальное окно">
+          ×
+        </button>
+        <div class="modal__body modal__body--stacked">
+          <div class="modal__carousel" data-carousel>
+            <button class="modal__carousel-btn modal__carousel-btn--prev" type="button" data-carousel-prev aria-label="Предыдущее фото">
+              ‹
+            </button>
+            <div class="modal__carousel-track" data-carousel-track>
+              <img src="assets/gear-1.jpg" alt="GEAR кейс — алерт и стаканы" />
+              <img src="assets/gear-2.jpg" alt="GEAR кейс — реализация сделки" />
+            </div>
+            <button class="modal__carousel-btn modal__carousel-btn--next" type="button" data-carousel-next aria-label="Следующее фото">
+              ›
+            </button>
+          </div>
+          <div>
+            <p class="tagline">Арбитраж на монете $GEAR</p>
+            <h3 id="modal-case-gear-title">⚙️GEAR — недостающая деталь для мини лайфченджа</h3>
+            <p>Расхождение до 80% + хорошая ликвидность для реализации крупных сделок.</p>
+            <p>
+              Вчера вечером бот прислал алерт о расхождении цен по монете $GEAR. Можно было откупить
+              на DEX и продать на CEX. Самое большое расхождение наблюдалось с BingX: в моменте спред
+              превышал 80% (8000$+ на депозит 10к$). По монете было много ликвидности в стакане, так
+              что можно было смело реализовывать большие депозиты.
+            </p>
+            <p>
+              Чуть позже монета показала еще пару движений, где также был арбитраж на большие суммы,
+              но уже в 6-7%, что в целом тоже неплохо.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal" id="modal-case-troll" hidden>
+      <div class="modal__backdrop" data-modal-close></div>
+      <div class="modal__dialog modal__dialog--wide" role="dialog" aria-modal="true" aria-labelledby="modal-case-troll-title">
+        <button class="modal__close" type="button" data-modal-close aria-label="Закрыть модальное окно">
+          ×
+        </button>
+        <div class="modal__body modal__body--stacked">
+          <div class="modal__carousel" data-carousel>
+            <button class="modal__carousel-btn modal__carousel-btn--prev" type="button" data-carousel-prev aria-label="Предыдущее фото">
+              ‹
+            </button>
+            <div class="modal__carousel-track" data-carousel-track>
+              <img src="assets/troll-1.jpg" alt="TROLL кейс — спреды Gate" />
+              <img src="assets/troll-2.jpg" alt="TROLL кейс — сделка" />
+            </div>
+            <button class="modal__carousel-btn modal__carousel-btn--next" type="button" data-carousel-next aria-label="Следующее фото">
+              ›
+            </button>
+          </div>
+          <div>
+            <p class="tagline">$TROLL | Gate</p>
+            <h3 id="modal-case-troll-title">Арбитраж на токене TROLL</h3>
+            <p>2Х на депозиты в десятки тысяч долларов.</p>
+            <p>
+              В одну ночь произошел памп монеты $TROLL на бирже Gate. Цену выросла в х2 что создало в
+              свою очередь интересные арбитражные ситуации.
+            </p>
+            <p>
+              Спреды были как с DEX, так и с CEX. Ликвидности было предостаточно, что позволяло
+              спокойно оборачивать десятки тысяч долларов, депозиты и выводы на гейте были открыты.
+              Арбитражная ситуация длилась около 11 минут, что позволяло сделать как минимум 2 круга.
+              Фактический спред достигал 70%.
+            </p>
+            <p>Очередная хорошая арбитражная ситуация под реализацию, работаем дальше.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal" id="modal-case-brett" hidden>
+      <div class="modal__backdrop" data-modal-close></div>
+      <div class="modal__dialog modal__dialog--wide" role="dialog" aria-modal="true" aria-labelledby="modal-case-brett-title">
+        <button class="modal__close" type="button" data-modal-close aria-label="Закрыть модальное окно">
+          ×
+        </button>
+        <div class="modal__body modal__body--stacked">
+          <div class="modal__carousel" data-carousel>
+            <button class="modal__carousel-btn modal__carousel-btn--prev" type="button" data-carousel-prev aria-label="Предыдущее фото">
+              ‹
+            </button>
+            <div class="modal__carousel-track" data-carousel-track>
+              <img src="assets/brett-1.jpg" alt="BRETT кейс — лимитка на Poloniex" />
+              <img src="assets/brett-2.jpg" alt="BRETT кейс — выводы" />
+              <img src="assets/brett-3.jpg" alt="BRETT кейс — кошелёк биржи" />
+              <img src="assets/brett-4.jpg" alt="BRETT кейс — хедж на Bitget" />
+              <img src="assets/brett-5.jpg" alt="BRETT кейс — финальный вывод" />
+            </div>
+            <button class="modal__carousel-btn modal__carousel-btn--next" type="button" data-carousel-next aria-label="Следующее фото">
+              ›
+            </button>
+          </div>
+          <div>
+            <p class="tagline">Арбитраж на токене BRETT</p>
+            <h3 id="modal-case-brett-title">$BRETT | Poloniex</h3>
+            <p>Арбитражной ситуацией поделился один из пользователей нашего сканера и нашего чата.</p>
+            <p>
+              Пришел сигнал на крупный объем. Открываю Poloniex и вижу лимитку на продажу на 250 000 $
+              ниже рынка на 6%.
+            </p>
+            <p>
+              Наблюдая, как её активно выкупают объемами, понимаю, что монет под вывод у биржи может не
+              хватить. Выкупаю, ставлю на вывод, но перевод не уходит.
+            </p>
+            <p>
+              Ищу кошелёк биржи в сканере, там кошелёк биржи не подписан. Перехожу на oklink
+              (<a href="https://www.oklink.com/ru" target="_blank" rel="noopener noreferrer">https://www.oklink.com/ru</a>)
+              и ищу там кошелёк биржи, нахожу и вижу, что под вывод осталось 11 $.
+            </p>
+            <p>
+              Понимаю, что токен жирный и на него есть фьючи. Не долго думая, завожу еще на Poloniex
+              депозит. Выкупаю на весь депозит BRETT на Poloniex по споту и на равное количество монет
+              ставлю хедж на фьючах Bitget. Ставлю второй вывод и сижу, жду.
+            </p>
+            <p>
+              В итоге первый вывод вывели через 1 час. Второй вывод почему-то только вечером, хотя на
+              кошельке биржи уже были токены под вывод. Продаю остаток.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal" id="modal-case-bal" hidden>
+      <div class="modal__backdrop" data-modal-close></div>
+      <div class="modal__dialog modal__dialog--wide" role="dialog" aria-modal="true" aria-labelledby="modal-case-bal-title">
+        <button class="modal__close" type="button" data-modal-close aria-label="Закрыть модальное окно">
+          ×
+        </button>
+        <div class="modal__body modal__body--stacked">
+          <div class="modal__carousel" data-carousel>
+            <button class="modal__carousel-btn modal__carousel-btn--prev" type="button" data-carousel-prev aria-label="Предыдущее фото">
+              ‹
+            </button>
+            <div class="modal__carousel-track" data-carousel-track>
+              <img src="assets/bal-1.jpg" alt="BAL кейс — алерт со спредом" />
+              <img src="assets/bal-2.jpg" alt="BAL кейс — маршрут DEX↔CEX" />
+            </div>
+            <button class="modal__carousel-btn modal__carousel-btn--next" type="button" data-carousel-next aria-label="Следующее фото">
+              ›
+            </button>
+          </div>
+          <div>
+            <p class="tagline">BAL | DEX↔CEX</p>
+            <h3 id="modal-case-bal-title">Межбиржевой арбитраж на росте токена</h3>
+            <p>+2550$ за 1 арбитражную ситуацию на токене BAL.</p>
+            <p>
+              В сканере пришёл сигнал со спредом в 25%. По BAL часто образуются арбитражные ситуации
+              на несколько процентов, и что немаловажно, в токене предостаточно ликвидности, чтобы
+              прогнать хороший объём денег. Наш бот прислал алерт с арбитражной ситуацией, где
+              потенциальная прибыль составляла 2 550$. Объём под реализацию был 10 000$. При должной
+              сноровке и хорошем депозите можно было ещё реализовать прибыль через другие биржи
+              (Gate, MEXC, Bitget, HTX).
+            </p>
+            <p>
+              25% — это хорошо, конечно, тем более на такой объём. Но если брать всю картину
+              происходящего в учёт, то на выходе мы получаем куда более интересный профит.
+            </p>
+            <p>
+              Алерты начали приходить с 1,3$. Так как монета в сети майнета Эфира, то депозиты у нас
+              идут не быстро, и к моменту зачисления курс составлял 2-2,2$.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal" id="modal-case-apu" hidden>
+      <div class="modal__backdrop" data-modal-close></div>
+      <div class="modal__dialog modal__dialog--wide" role="dialog" aria-modal="true" aria-labelledby="modal-case-apu-title">
+        <button class="modal__close" type="button" data-modal-close aria-label="Закрыть модальное окно">
+          ×
+        </button>
+        <div class="modal__body modal__body--stacked">
+          <div class="modal__carousel" data-carousel>
+            <button class="modal__carousel-btn modal__carousel-btn--prev" type="button" data-carousel-prev aria-label="Предыдущее фото">
+              ‹
+            </button>
+            <div class="modal__carousel-track" data-carousel-track>
+              <img src="assets/apu-1.jpg" alt="APU кейс — сигнал" />
+              <img src="assets/apu-2.jpg" alt="APU кейс — стаканы" />
+            </div>
+            <button class="modal__carousel-btn modal__carousel-btn--next" type="button" data-carousel-next aria-label="Следующее фото">
+              ›
+            </button>
+          </div>
+          <div>
+            <p class="tagline">APU | DEX↔CEX</p>
+            <h3 id="modal-case-apu-title">Жирный арбитраж на токене APU</h3>
+            <p>Арбитражная ситуация с возможностью прогона 100k$ со спредом 35%.</p>
+            <p>
+              28 октября, в 23:00 по МСК, начали пампить монету $APU на бирже MEXC. После пампа
+              выставили стенку крупных лимиток на сумму в 300к$. Спред был в сети майнет, круг
+              занимал около 5-7 минут. Те, кто не сразу начали гнать монеты с DEX, пропустили первый
+              памп, но успели на второй, который давал закрывать арбитражи со спредом 66% и объёмом в
+              несколько десятков тысяч долларов. Можно было закрыть арбитраж в 100к$+ со спредом около
+              35%.
+            </p>
+            <p>
+              Ситуация была с очень хорошим риск-ревардом: стенка жирных лимиток, пул ликвидности более
+              2 млн $, поздний вечер. Всё это открыло арбитражное окно на 20 минут. Заработать дали всем.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <footer class="footer">
+      <div class="footer__content container">
+        <div>
+          <img
+            class="footer__logo"
+            src="assets/arbitrage-raider-logo.png"
+            alt="Arbitrage Raider"
+          />
+          <p>Конвертируйте дисбаланс рынка в баланс на криптокошельке.</p>
+        </div>
+        <div class="footer__links">
+          <a href="#">Политика</a>
+          <a href="#">Договор оферты</a>
+          <a href="#">Поддержка</a>
+          <a href="#video">Видео</a>
+          <a href="#pricing">Тарифы</a>
+          <a href="#cases">Кейсы</a>
+          <a href="#faq">FAQ</a>
+        </div>
+        <div class="footer__partners">
+          <p>Партнёрская программа</p>
+          <a
+            class="footer__partners-link"
+            href="https://t.me/RAIDER_ADM?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5!%20%D0%98%D0%BD%D1%82%D0%B5%D1%80%D0%B5%D1%81%D1%83%D0%B5%D1%82%20%D0%B2%D0%B0%D1%88%D0%B0%20%D0%BF%D0%B0%D1%80%D1%82%D0%BD%D1%91%D1%80%D1%81%D0%BA%D0%B0%D1%8F%20%D0%BF%D1%80%D0%BE%D0%B3%D1%80%D0%B0%D0%BC%D0%BC%D0%B0%20%E2%80%94%20%D0%BA%D0%B0%D0%BA%D0%B8%D0%B5%20%D1%83%D1%81%D0%BB%D0%BE%D0%B2%D0%B8%D1%8F%20%D0%B8%20%D1%82%D1%80%D0%B5%D0%B1%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D1%8F?"
+            target="_blank"
+            rel="noopener noreferrer"
+            >Узнать условия в Telegram →</a
+          >
+        </div>
+        <div class="footer__cta">
+          <p>Оставайтесь в курсе обновлений</p>
+          <form class="footer__form">
+            <input type="email" placeholder="Email" required />
+            <button class="btn btn--primary" type="submit">Подписаться</button>
+          </form>
+        </div>
+      </div>
+      <p class="footer__copy container">
+        © 2026 ARBITRAGE RAIDER. Все права защищены.
+      </p>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
