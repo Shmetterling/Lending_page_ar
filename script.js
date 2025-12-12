@@ -195,3 +195,49 @@ if (videoHighlight && videoCardList.length) {
   videoPrevBtn?.addEventListener('click', () => moveBy(-1));
   videoNextBtn?.addEventListener('click', () => moveBy(1));
 }
+
+document.querySelectorAll('[data-countdown]').forEach((container) => {
+  const targetDateValue = container.dataset.countdownTarget;
+  if (!targetDateValue) return;
+  const targetDate = new Date(targetDateValue);
+  if (Number.isNaN(targetDate.getTime())) return;
+
+  const daysEl = container.querySelector('[data-countdown-days]');
+  const hoursEl = container.querySelector('[data-countdown-hours]');
+  const minutesEl = container.querySelector('[data-countdown-minutes]');
+  const secondsEl = container.querySelector('[data-countdown-seconds]');
+
+  const updateSegment = (el, value) => {
+    if (!el) return;
+    el.textContent = String(value).padStart(2, '0');
+  };
+
+  const updateCountdown = () => {
+    const now = new Date();
+    let diff = targetDate.getTime() - now.getTime();
+    if (diff <= 0) {
+      updateSegment(daysEl, 0);
+      updateSegment(hoursEl, 0);
+      updateSegment(minutesEl, 0);
+      updateSegment(secondsEl, 0);
+      clearInterval(timerId);
+      return;
+    }
+
+    const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+    diff -= days * 1000 * 60 * 60 * 24;
+    const hours = Math.floor(diff / (1000 * 60 * 60));
+    diff -= hours * 1000 * 60 * 60;
+    const minutes = Math.floor(diff / (1000 * 60));
+    diff -= minutes * 1000 * 60;
+    const seconds = Math.floor(diff / 1000);
+
+    updateSegment(daysEl, days);
+    updateSegment(hoursEl, hours);
+    updateSegment(minutesEl, minutes);
+    updateSegment(secondsEl, seconds);
+  };
+
+  updateCountdown();
+  const timerId = setInterval(updateCountdown, 1000);
+});
