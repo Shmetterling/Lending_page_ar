@@ -865,19 +865,22 @@ main::after {
 }
 
 .pricing__offer {
-  margin-top: 32px;
-  padding: 32px;
-  border-radius: 32px;
-  border: 1px solid var(--border);
-  background: rgba(255, 255, 255, 0.03);
-  display: grid;
-  grid-template-columns: repeat(2, minmax(280px, 1fr));
-  gap: 24px;
-  align-items: stretch;
-  position: relative;
-  overflow: hidden;
-  isolation: isolate;
-}
+       margin-top: 32px;
+       padding: 32px;
+       border-radius: 32px;
+       border: 1px solid var(--border);
+       background: rgba(255, 255, 255, 0.03);                                                                                                                                                                                    
+       display: grid;                                                                                                                                                                                                            
+       grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));                                                                                                                                                              
+       grid-template-areas:                                                                                                                                                                                                      
+         'copy prices'                                                                                                                                                                                                           
+         'countdown countdown';                                                                                                                                                                                                  
+       gap: 24px;                                                                                                                                                                                                                
+       align-items: stretch;                                                                                                                                                                                                     
+       position: relative;                                                                                                                                                                                                       
+       overflow: hidden;                                                                                                                                                                                                         
+       isolation: isolate;                                                                                                                                                                                                       
+     }
 
 .pricing__offer::before {
   content: '';
