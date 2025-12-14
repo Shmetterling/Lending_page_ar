@@ -281,6 +281,10 @@ body.modal-open {
   max-width: 1100px;
   width: min(100%, 1100px);
   box-shadow: 0 30px 80px rgba(0, 0, 0, 0.6);
+  max-height: 90vh;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
 }
 
 .modal__dialog--wide {
@@ -306,7 +310,10 @@ body.modal-open {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
   gap: 30px;
-  align-items: center;
+  align-items: flex-start;
+  max-height: calc(90vh - 120px);
+  overflow-y: auto;
+  padding-right: 12px;
 }
 
 .modal__body ul {
@@ -380,6 +387,26 @@ body.modal-open {
 
 .modal__body--stacked {
   grid-template-columns: 1fr;
+}
+
+@media (max-width: 900px) {
+  .modal__dialog {
+    padding: 32px 24px;
+  }
+
+  .modal__body {
+    grid-template-columns: 1fr;
+    gap: 20px;
+    max-height: none;
+    overflow: visible;
+    padding-right: 0;
+  }
+
+  .modal__carousel-track img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+  }
 }
 
 .why__panel {
@@ -865,22 +892,26 @@ main::after {
 }
 
 .pricing__offer {
-       margin-top: 32px;
-       padding: 32px;
-       border-radius: 32px;
-       border: 1px solid var(--border);
-       background: rgba(255, 255, 255, 0.03);                                                                                                                                                                                    
-       display: grid;                                                                                                                                                                                                            
-       grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));                                                                                                                                                              
-       grid-template-areas:                                                                                                                                                                                                      
-         'copy prices'                                                                                                                                                                                                           
-         'countdown countdown';                                                                                                                                                                                                  
-       gap: 24px;                                                                                                                                                                                                                
-       align-items: stretch;                                                                                                                                                                                                     
-       position: relative;                                                                                                                                                                                                       
-       overflow: hidden;                                                                                                                                                                                                         
-       isolation: isolate;                                                                                                                                                                                                       
-     }
+  margin-top: 32px;
+  padding: 32px;
+  border-radius: 32px;
+  border: 1px solid var(--border);
+  background: rgba(255, 255, 255, 0.03);
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  grid-template-areas:
+    'copy prices'
+    'countdown countdown';
+  gap: 24px;
+  align-items: stretch;
+  position: relative;
+  overflow: hidden;
+  isolation: isolate;
+}
+
+.pricing__offer-copy {
+  grid-area: copy;
+}
 
 .pricing__offer::before {
   content: '';
@@ -992,6 +1023,7 @@ main::after {
 }
 
 .pricing__offer-prices {
+  grid-area: prices;
   border: 1px solid rgba(255, 255, 255, 0.18);
   border-radius: 20px;
   padding: 20px 26px;
@@ -1019,13 +1051,13 @@ main::after {
 }
 
 .pricing__offer-countdown {
+  grid-area: countdown;
   display: flex;
   align-items: center;
   justify-content: space-between;
   flex-wrap: wrap;
   gap: 20px;
   width: 100%;
-  grid-column: 1 / -1;
 }
 
 .pricing__offer-prices li {
@@ -1058,11 +1090,10 @@ main::after {
 @media (max-width: 900px) {
   .pricing__offer {
     grid-template-columns: minmax(0, 1fr);
-  }
-
-  .pricing__offer-prices,
-  .pricing__offer-countdown {
-    grid-column: 1 / -1;
+    grid-template-areas:
+      'copy'
+      'prices'
+      'countdown';
   }
 }
 
