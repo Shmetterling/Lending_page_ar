@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+Sitemap: https://arbitrage-raider-lending.ru/sitemap.xml
+Host: arbitrage-raider-lending.ru
