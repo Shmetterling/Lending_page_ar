@@ -208,3 +208,42 @@ document.querySelectorAll('[data-case-gallery]').forEach((gallery) => {
     updatePosition();
   });
 });
+
+const mobileNav = document.getElementById('mobile-nav');
+const mobileNavTrigger = document.querySelector('[data-mobile-nav-trigger]');
+const mobileNavCloseTargets = document.querySelectorAll('[data-mobile-nav-close]');
+const mobileNavLinks = document.querySelectorAll('[data-mobile-nav-link]');
+
+const openMobileNav = () => {
+  if (!mobileNav) return;
+  mobileNav.classList.add('mobile-nav--open');
+  mobileNav.setAttribute('aria-hidden', 'false');
+  document.body.classList.add('mobile-nav-open');
+  mobileNavTrigger?.setAttribute('aria-expanded', 'true');
+};
+
+const closeMobileNav = () => {
+  if (!mobileNav) return;
+  mobileNav.classList.remove('mobile-nav--open');
+  mobileNav.setAttribute('aria-hidden', 'true');
+  document.body.classList.remove('mobile-nav-open');
+  mobileNavTrigger?.setAttribute('aria-expanded', 'false');
+};
+
+mobileNavTrigger?.addEventListener('click', () => {
+  if (mobileNav?.classList.contains('mobile-nav--open')) {
+    closeMobileNav();
+  } else {
+    openMobileNav();
+  }
+});
+
+mobileNavCloseTargets.forEach((btn) => {
+  btn.addEventListener('click', closeMobileNav);
+});
+
+mobileNavLinks.forEach((link) => {
+  link.addEventListener('click', () => {
+    closeMobileNav();
+  });
+});
