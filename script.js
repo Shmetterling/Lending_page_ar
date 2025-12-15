@@ -18,83 +18,6 @@ document.querySelectorAll('.faq__item').forEach((item) => {
   });
 });
 
-const body = document.body;
-let activeModal = null;
-
-const getModal = (id) => document.getElementById(`modal-${id}`);
-
-const openModal = (id) => {
-  const modal = getModal(id);
-  if (!modal) return;
-  if (activeModal && activeModal !== modal) {
-    closeModal(activeModal);
-  }
-  modal.hidden = false;
-  requestAnimationFrame(() => modal.classList.add('is-visible'));
-  body.classList.add('modal-open');
-  activeModal = modal;
-};
-
-const closeModal = (modal) => {
-  if (!modal) return;
-  modal.classList.remove('is-visible');
-  setTimeout(() => {
-    modal.hidden = true;
-  }, 250);
-  body.classList.remove('modal-open');
-  if (activeModal === modal) {
-    activeModal = null;
-  }
-};
-
-document.querySelectorAll('[data-modal]').forEach((btn) => {
-  btn.addEventListener('click', () => openModal(btn.dataset.modal));
-});
-
-document.querySelectorAll('[data-modal-close]').forEach((el) => {
-  el.addEventListener('click', () => closeModal(el.closest('.modal')));
-});
-
-document.addEventListener('keydown', (event) => {
-  if (event.key === 'Escape' && activeModal) {
-    closeModal(activeModal);
-  }
-});
-
-const initCarousel = (carousel) => {
-  const track = carousel.querySelector('[data-carousel-track]');
-  if (!track) return;
-  const slides = Array.from(track.children);
-  if (!slides.length) return;
-
-  let index = 0;
-  const prevBtn = carousel.querySelector('[data-carousel-prev]');
-  const nextBtn = carousel.querySelector('[data-carousel-next]');
-
-  const update = () => {
-    track.style.transform = `translateX(-${index * 100}%)`;
-  };
-
-  const goTo = (newIndex) => {
-    if (slides.length === 0) return;
-    if (newIndex < 0) {
-      index = slides.length - 1;
-    } else if (newIndex >= slides.length) {
-      index = 0;
-    } else {
-      index = newIndex;
-    }
-    update();
-  };
-
-  prevBtn?.addEventListener('click', () => goTo(index - 1));
-  nextBtn?.addEventListener('click', () => goTo(index + 1));
-
-  update();
-};
-
-document.querySelectorAll('[data-carousel]').forEach(initCarousel);
-
 const videoHighlight = document.querySelector('[data-video-highlight]');
 const videoCards = document.querySelectorAll('[data-video-item]');
 const videoCardList = Array.from(videoCards);
@@ -240,4 +163,48 @@ document.querySelectorAll('[data-countdown]').forEach((container) => {
 
   updateCountdown();
   const timerId = setInterval(updateCountdown, 1000);
+});
+
+document.querySelectorAll('[data-case-gallery]').forEach((gallery) => {
+  const track = gallery.querySelector('.case-gallery__track');
+  const slides = track ? Array.from(track.children) : [];
+  const prevBtn = gallery.querySelector('[data-case-prev]');
+  const nextBtn = gallery.querySelector('[data-case-next]');
+
+  if (!track || slides.length === 0) {
+    prevBtn?.setAttribute('hidden', '');
+    nextBtn?.setAttribute('hidden', '');
+    return;
+  }
+
+  let index = 0;
+
+  const toggleButtons = () => {
+    if (slides.length <= 1) {
+      prevBtn?.setAttribute('hidden', '');
+      nextBtn?.setAttribute('hidden', '');
+    } else {
+      prevBtn?.removeAttribute('hidden');
+      nextBtn?.removeAttribute('hidden');
+    }
+  };
+
+  const updatePosition = () => {
+    track.style.transform = `translateX(-${index * 100}%)`;
+  };
+
+  toggleButtons();
+  updatePosition();
+
+  if (slides.length <= 1) return;
+
+  prevBtn?.addEventListener('click', () => {
+    index = (index - 1 + slides.length) % slides.length;
+    updatePosition();
+  });
+
+  nextBtn?.addEventListener('click', () => {
+    index = (index + 1) % slides.length;
+    updatePosition();
+  });
 });

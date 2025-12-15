@@ -155,7 +155,7 @@ img {
 }
 
 .logo--hero img {
-  height: 54px;
+  height: 38px;
   width: auto;
   display: block;
 }
@@ -433,11 +433,49 @@ body.modal-open {
   border-radius: 20px;
   border: 1px solid var(--border);
   background: rgba(255, 255, 255, 0.02);
+  position: relative;
+  overflow: hidden;
+  isolation: isolate;
 }
 
 .why__grid h3 {
   margin: 0 0 8px;
   font-size: 1.1rem;
+  position: relative;
+  z-index: 1;
+}
+
+.why__grid p {
+  position: relative;
+  z-index: 1;
+}
+
+.why__highlight {
+  color: #ffd166;
+  font-weight: 600;
+  position: relative;
+  z-index: 1;
+}
+
+.why__card--target,
+.why__card--speed,
+.why__card--filters {
+  padding-right: 140px;
+}
+
+.why__card-logo {
+  position: absolute;
+  width: 120px;
+  height: auto;
+  top: -4px;
+  right: 0;
+  pointer-events: none;
+  opacity: 0.5;
+  z-index: 0;
+}
+
+.why__card--speed .why__card-logo {
+  top: 8px;
 }
 
 .tools {
@@ -1241,6 +1279,112 @@ main::after {
   flex-wrap: wrap;
 }
 
+.case-card__details {
+  flex: 1 1 100%;
+  width: 100%;
+  margin-top: 12px;
+}
+
+.case-card__details summary {
+  list-style: none;
+  cursor: pointer;
+  display: block;
+  padding: 12px 0;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--text);
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.case-card__details[open] summary {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.case-card__details summary::after {
+  content: '+';
+  float: right;
+  font-size: 1.4rem;
+  line-height: 1;
+}
+
+.case-card__details[open] summary::after {
+  content: '−';
+}
+
+.case-card__details-content {
+  margin-top: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.case-card__gallery {
+  position: relative;
+  width: 100%;
+  border-radius: 24px;
+  overflow: hidden;
+  background: rgba(255, 255, 255, 0.05);
+  aspect-ratio: 16 / 9;
+}
+
+.case-gallery__track {
+  display: flex;
+  height: 100%;
+  transition: transform 0.4s ease;
+}
+
+.case-gallery__track img {
+  flex: 0 0 100%;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  background: rgba(2, 2, 20, 0.8);
+  padding: 8px;
+  display: block;
+}
+
+.case-gallery__btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 44px;
+  height: 44px;
+  border-radius: 999px;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  background: rgba(4, 4, 21, 0.7);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.6rem;
+  cursor: pointer;
+  backdrop-filter: blur(8px);
+  transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+.case-gallery__btn:hover {
+  transform: translateY(-50%) scale(1.05);
+}
+
+.case-gallery__btn--prev {
+  left: 12px;
+}
+
+.case-gallery__btn--next {
+  right: 12px;
+}
+
+.case-gallery__btn[hidden] {
+  display: none;
+}
+
+.case-card__text p {
+  margin: 0 0 12px;
+  line-height: 1.5;
+  color: var(--text-soft);
+}
+
 .case-card__tag {
   font-size: 0.85rem;
   text-transform: uppercase;
@@ -1251,6 +1395,52 @@ main::after {
 
 .case-card__cta {
   flex-shrink: 0;
+}
+
+.tool-card__details {
+  margin-top: 16px;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  padding-top: 16px;
+}
+
+@media (max-width: 640px) {
+  .case-gallery__btn {
+    width: 36px;
+    height: 36px;
+    font-size: 1.2rem;
+  }
+}
+
+.tool-card__details summary {
+  list-style: none;
+  cursor: pointer;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.tool-card__details summary::after {
+  content: '+';
+  margin-left: 8px;
+}
+
+.tool-card__details[open] summary::after {
+  content: '−';
+}
+
+.tool-card__details-content {
+  margin-top: 12px;
+  display: grid;
+  gap: 16px;
+}
+
+.tool-card__details-content figure {
+  margin: 0;
+}
+
+.tool-card__details-content img {
+  width: 100%;
+  border-radius: 20px;
 }
 
 .video__layout {
@@ -1586,4 +1776,8 @@ main::after {
   .video__layout {
     grid-template-columns: 1fr;
   }
+}
+.case-card__details summary::-webkit-details-marker,
+.tool-card__details summary::-webkit-details-marker {
+  display: none;
 }
