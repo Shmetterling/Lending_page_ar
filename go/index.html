@@ -56,28 +56,69 @@
         text-decoration: none;
         margin-top: 1.2rem;
       }
+      .cta[aria-disabled='true'] {
+        opacity: 0.6;
+        pointer-events: none;
+      }
+      .card__actions {
+        display: flex;
+        gap: 1rem;
+        flex-wrap: wrap;
+      }
     </style>
   </head>
   <body>
     <div class="card">
-      <h1>Ссылка относится к внешнему ресурсу</h1>
+      <h1>Переход на внешний ресурс</h1>
       <p>
-        В рамках рекламной кампании все кликабельные элементы ведут на домен ARBITRAGE RAIDER. Чтобы посетить исходный источник,
-        скопируйте ссылку ниже вручную или запросите актуальные данные у менеджера.
+        Чтобы защитить вас от подмены ссылок, мы не перенаправляем на сторонние ресурсы автоматически. Нажмите на кнопку
+        "выполнить переход" или скопируйте ссылку и перейдите вручную.
       </p>
       <p>
         Источник:<br />
         <code data-external-link>Загрузка…</code>
       </p>
-      <p>
-        Если вы не уверены в безопасности перехода, лучше уточнить детали у нашей команды. Мы оперативно отвечаем внутри формы обратной связи.
-      </p>
-      <a class="cta" href="/index.html#contact">Открыть форму контакта</a>
+      <div class="card__actions">
+        <a class="cta" data-external-button href="/index.html#contact" rel="noopener">выполнить переход</a>
+      </div>
     </div>
+
     <script>
       const params = new URLSearchParams(window.location.search);
       const to = params.get('to');
-      document.querySelector('[data-external-link]').textContent = to || 'Не указано — вернитесь на главную';
+      const display = document.querySelector('[data-external-link]');
+      const actionButton = document.querySelector('[data-external-button]');
+      const fallbackText = 'Не указано — вернитесь на главную';
+
+      const isValidUrl = (url) => {
+        if (!url) return false;
+        try {
+          const parsed = new URL(url);
+          return parsed.protocol === 'http:' || parsed.protocol === 'https:';
+        } catch (error) {
+          return false;
+        }
+      };
+
+      const sourceUrl = isValidUrl(to) ? to : null;
+
+      if (display) {
+        display.textContent = sourceUrl ?? fallbackText;
+      }
+
+      if (actionButton) {
+        if (sourceUrl) {
+          actionButton.href = sourceUrl;
+          actionButton.setAttribute('target', '_blank');
+          actionButton.setAttribute('rel', 'noopener noreferrer');
+          actionButton.removeAttribute('aria-disabled');
+        } else {
+          actionButton.href = '#';
+          actionButton.removeAttribute('target');
+          actionButton.setAttribute('rel', 'noopener');
+          actionButton.setAttribute('aria-disabled', 'true');
+        }
+      }
     </script>
   </body>
 </html>
